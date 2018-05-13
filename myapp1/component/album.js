@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text, Image,Linking} from 'react-native';
+import {View, Text, Image, Linking} from 'react-native';
 import Card from './Card'
 import Cardsection from './Cardsection'
 import Button from './Button'
@@ -11,7 +11,7 @@ export default class Album extends Component {
 
     render() {
         const {image, sm_img, title, content} = this.props.game_data;
-        const {imgshow,Imgstyle,title_,content_} = styles;
+        const {imgshow, Imgstyle, title_, content_} = styles;
         return <Card>
             <Cardsection style={imgshow}>
                 <Image source={{uri: image}} style={Imgstyle}></Image>
@@ -24,7 +24,7 @@ export default class Album extends Component {
                 </View>
             </Cardsection>
             <Cardsection>
-                <Button onPress={()=>Linking.openURL('http://pvp.qq.com/')}>
+                <Button onPress={() => Linking.openURL('http://pvp.qq.com/')}>
                     购买
                 </Button>
             </Cardsection>
